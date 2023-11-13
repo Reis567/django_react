@@ -1,4 +1,4 @@
-import Cabecalho from "@/components/cabecalho/cabecalho"
+import Cabecalho from "@/components/cabecalho/Cabecalho"
 
 export default function Home() {
   return (

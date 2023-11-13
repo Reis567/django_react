@@ -1,8 +1,15 @@
 import React from 'react'
+import { CabecalhoCont, Logo } from './Cabecalho.style'
+
 
 const Cabecalho = () => {
   return (
-    <div>Cabecalho</div>
+    <CabecalhoCont>
+        <div>
+            <Logo src = '/public/logo.png'/>
+
+        </div>
+    </CabecalhoCont>
   )
 }
 
