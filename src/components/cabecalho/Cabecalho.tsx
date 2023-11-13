@@ -1,15 +1,25 @@
 import React from 'react'
-import { CabecalhoCont, Logo } from './Cabecalho.style'
+import styled from 'styled-components';
+
+const Cont = styled.div`
+  color: #333;
+  padding: 10px;
+  border: 3px solid #ddd;
+`;
+const Img = styled.img`
+  border-radius:10px;
+  max-height:80px;
+  max-width:80px;
+`;
 
 
 const Cabecalho = () => {
   return (
-    <CabecalhoCont>
-        <div>
-            <Logo src = '/public/logo.png'/>
-
-        </div>
-    </CabecalhoCont>
+    <div>
+      <Cont>
+        <Img src = '/imagens/logo.png'/>
+      </Cont>
+    </div>
   )
 }
 
