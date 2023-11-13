@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const colors = {
   white: '#f7f2ee',
-  black: '#000000',
+  black: '#131111',
   brown: '#341d08',
 };
 const Cont = styled.div`
