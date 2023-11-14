@@ -2,13 +2,8 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const colors = {
-  white: '#f7f2ee',
-  black: '#131111',
-  brown: '#341d08',
-};
 const Cont = styled.div`
-  background: ${colors.brown};
+  background:  #341d08;
   padding: 20px;
   display:flex;
   align-items:center;

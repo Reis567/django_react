@@ -23,7 +23,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       </head>
       <body className={inter.className}>
         <ThemeProvider theme={tema}>
-    
             <Cabecalho/>
               {children}
         </ThemeProvider>

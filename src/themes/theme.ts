@@ -20,14 +20,15 @@ const tema = createTheme({
             styleOverrides:{
                 root:{
                     color:'#f7f2ee',
-                    borderRadius:0,
+                    borderRadius:'10px',
                     backgroundColor:'#341d08',
                     textTransform:'none',
                     fontWeight:'bold',
                     paddingTop:'12px',
                     paddingBottom:'12px',
                     ":hover":{
-                        backgroundColor:'#341d08',
+                        backgroundColor:'#f7f2ee',
+                        color:'#341d08',
                     }
                 }
             }
