@@ -33,17 +33,17 @@ const Lista = () => {
   return (
         <ListStyled>
               <ItemStyled>
-                <Foto/>
+                <Foto src='/imagens/renato.png'/>
                 <Infos>
                     <Nome>
-
+                      Renato dos reis
                     </Nome>
 
                     <Valor>
-                      
+                      R$ 100,00
                     </Valor>
                     <Descricao>
-                      
+                      Desenvolvedor web
                     </Descricao>
                 </Infos>
               </ItemStyled>

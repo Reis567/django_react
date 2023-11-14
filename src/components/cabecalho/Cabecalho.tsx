@@ -21,11 +21,9 @@ const Img = styled.img`
 
 const Cabecalho = () => {
   return (
-    <div>
       <Cont>
         <Img src = '/imagens/logo.png'/>
       </Cont>
-    </div>
   )
 }
 
