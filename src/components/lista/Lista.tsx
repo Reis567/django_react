@@ -14,7 +14,7 @@ const Infos = styled.div`
 
 `;
 
-const foto = styled.img`
+const Foto = styled.img`
 
 `;
 
@@ -31,9 +31,23 @@ const Descricao = styled.p`
 
 const Lista = () => {
   return (
-    <div>
-        Lista
-    </div>
+        <ListStyled>
+              <ItemStyled>
+                <Foto/>
+                <Infos>
+                    <Nome>
+
+                    </Nome>
+
+                    <Valor>
+                      
+                    </Valor>
+                    <Descricao>
+                      
+                    </Descricao>
+                </Infos>
+              </ItemStyled>
+        </ListStyled>
   )
 }
 
