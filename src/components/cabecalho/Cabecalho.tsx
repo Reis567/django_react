@@ -24,6 +24,11 @@ const Sub = styled.a`
   font-size: 15px;
   cursor: pointer;
   padding: 10px;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    color: #131111;
+    text-shadow: 1px 1px 10px  #f7f2ee45;
+  }
 `
 
 const Cabecalho = () => {

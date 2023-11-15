@@ -12,6 +12,8 @@ const ListStyled = styled.ul`
 
 const ItemStyled = styled.li`
   padding: 20px;
+  max-height: 80%;
+  max-width: 80%;
 `;
 
 const Infos = styled.div`
@@ -20,6 +22,7 @@ const Infos = styled.div`
 
 const Foto = styled.img`
   width: 100%;
+  height: 100%;
   border-radius: 20px;
 `;
 
