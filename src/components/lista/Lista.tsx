@@ -56,7 +56,9 @@ const Lista = (props:PropsLista) => {
                       </Nome>
 
                       <Valor>
-                        R$ {profissional.valor_hora} / HR
+                        R$ {profissional.valor_hora.toLocaleString('pt-Br',{
+                          minimumFractionDigits:2,
+                        })} / HR
                       </Valor>
                       <Descricao>
                       {profissional.descricao}
