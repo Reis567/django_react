@@ -12,17 +12,29 @@ const Cont = styled.div`
   border-bottom-right-radius: 20px;
 `;
 
-const Img = styled.img`
-  border-radius:10px;
-  max-height:80px;
-  max-width:80px;
-`;
-
+const Title = styled.h1`
+  color: #f7f2ee;
+  font-size: 35px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+`
+const Sub = styled.a`
+  color: #f7f2ee;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px;
+`
 
 const Cabecalho = () => {
   return (
       <Cont>
-        <Img src = '/imagens/logo.png'/>
+        <Title>
+          Hire me
+          <Sub href='https://github.com/Reis567' target='_blank'>
+            By Reis567
+          </Sub>
+        </Title>
       </Cont>
   )
 }
