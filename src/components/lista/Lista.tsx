@@ -39,35 +39,47 @@ const Descricao = styled.p`
   word-break: break-word;
 `;
 
+const ListaVazia = styled.h3`
+  text-align: center;
+  padding: 10px;
+  margin-top:30px;
+  font-size:30px;
+`
 interface PropsLista {
   profissionais:Profissional[]
 }
-
 const Lista = (props:PropsLista) => {
   return (
+    <div>
+      {props.profissionais.length > 0 ? (
         <ListStyled>
           {props.profissionais.map(profissional => (
-
-                <ItemStyled key={profissional.id}>
-                  <Foto src={profissional.foto}/>
-                  <Infos>
-                      <Nome>
-                        {profissional.nome}
-                      </Nome>
-
-                      <Valor>
-                        R$ {profissional.valor_hora.toLocaleString('pt-Br',{
-                          minimumFractionDigits:2,
-                        })} / HR
-                      </Valor>
-                      <Descricao>
-                      {profissional.descricao}
-                      </Descricao>
-                  </Infos>
-                </ItemStyled>
-                ))}
+            <ItemStyled key={profissional.id}>
+              <Foto src={profissional.foto}/>
+              <Infos>
+                <Nome>
+                  {profissional.nome}
+                </Nome>
+                <Valor>
+                  R$ {profissional.valor_hora.toLocaleString('pt-Br', {
+                    minimumFractionDigits: 2,
+                  })} / HR
+                </Valor>
+                <Descricao>
+                  {profissional.descricao}
+                </Descricao>
+              </Infos>
+            </ItemStyled>
+          ))}
         </ListStyled>
+      ) : (
+        <ListaVazia>
+          No momento não temos profissionais disponíveis ...
+        </ListaVazia>
+      )}
+    </div>
   )
 }
+
 
 export default Lista
