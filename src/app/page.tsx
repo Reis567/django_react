@@ -37,7 +37,7 @@ export default function Home() {
 
 
     <div>
-      <Lista></Lista>
+      <Lista profissionais={profissionais}></Lista>
     </div>
 
   )

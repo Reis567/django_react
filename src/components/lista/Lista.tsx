@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import styled from 'styled-components';
+import { Profissional } from '../entidades/profissional';
  
 const ListStyled = styled.ul`
   width: 100%;
@@ -38,57 +39,31 @@ const Descricao = styled.p`
   word-break: break-word;
 `;
 
-const Lista = () => {
+interface PropsLista {
+  profissionais:Profissional[]
+}
+
+const Lista = (props:PropsLista) => {
   return (
         <ListStyled>
-              <ItemStyled>
-                <Foto src='/imagens/renato.png'/>
-                <Infos>
-                    <Nome>
-                      Renato dos reis
-                    </Nome>
+          {props.profissionais.map(profissional => (
 
-                    <Valor>
-                      R$ 100,00 / HR
-                    </Valor>
-                    <Descricao>
-                      Desenvolvedor web
-                    </Descricao>
-                </Infos>
-              </ItemStyled>
+                <ItemStyled key={profissional.id}>
+                  <Foto src={profissional.foto}/>
+                  <Infos>
+                      <Nome>
+                        {profissional.nome}
+                      </Nome>
 
-
-              <ItemStyled>
-                <Foto src='/imagens/renato.png'/>
-                <Infos>
-                    <Nome>
-                      Renato dos reis
-                    </Nome>
-
-                    <Valor>
-                    R$ 100,00 / HR
-                    </Valor>
-                    <Descricao>
-                      Desenvolvedor web
-                    </Descricao>
-                </Infos>
-              </ItemStyled>
-
-              <ItemStyled>
-                <Foto src='/imagens/renato.png'/>
-                <Infos>
-                    <Nome>
-                      Renato dos reis
-                    </Nome>
-
-                    <Valor>
-                    R$ 100,00 / HR
-                    </Valor>
-                    <Descricao>
-                      Desenvolvedor web
-                    </Descricao>
-                </Infos>
-              </ItemStyled>
+                      <Valor>
+                        R$ {profissional.valor_hora} / HR
+                      </Valor>
+                      <Descricao>
+                      {profissional.descricao}
+                      </Descricao>
+                  </Infos>
+                </ItemStyled>
+                ))}
         </ListStyled>
   )
 }
