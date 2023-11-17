@@ -1,7 +1,9 @@
 "use client"
 import React from 'react'
 import styled from 'styled-components';
+import { Button } from '@mui/material';
 import { Profissional } from '../entidades/profissional';
+
  
 const ListStyled = styled.ul`
   width: 100%;
@@ -13,8 +15,8 @@ const ListStyled = styled.ul`
 
 const ItemStyled = styled.li`
   padding: 20px;
-  max-height: 80%;
-  max-width: 80%;
+  max-height: 50%;
+  max-width: 50%;
 `;
 
 const Infos = styled.div`
@@ -37,6 +39,7 @@ const Valor = styled.p`
 
 const Descricao = styled.p`
   word-break: break-word;
+  margin-bottom:30px;
 `;
 
 const ListaVazia = styled.h3`
@@ -68,6 +71,7 @@ const Lista = (props:PropsLista) => {
                 <Descricao>
                   {profissional.descricao}
                 </Descricao>
+                <Button variant="outlined">Contratar</Button>
               </Infos>
             </ItemStyled>
           ))}
