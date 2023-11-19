@@ -5,6 +5,9 @@ import { ApiService } from "@/services/ApiService";
 export function useIndex(){
     const [listaProfissionais, setListaProfissionais] = useState<Profissional[]>([]);
 
+    const [nome , setNome]= useState("");
+    const [email , setEmail]= useState("");
+
     useEffect(() => {
       ApiService.get('/profissionais')
         .then((response) => {
@@ -15,5 +18,9 @@ export function useIndex(){
         });
     }, []);
     
-    return {listaProfissionais}
+    return {listaProfissionais,
+              nome,
+              setNome,
+              email,
+              setEmail}
 }

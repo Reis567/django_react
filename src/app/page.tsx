@@ -5,7 +5,12 @@ import { Profissional } from "@/components/entidades/profissional";
 import { useIndex } from "@/hooks/pages/useIndex";
 
 export default function Home() {
-  const { listaProfissionais } = useIndex();
+  const { listaProfissionais ,
+          nome,
+          setNome,
+          email,
+          setEmail} = useIndex();
+
 
   return (
     <div>
