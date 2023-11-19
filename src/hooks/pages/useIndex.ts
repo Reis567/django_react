@@ -18,6 +18,13 @@ export function useIndex(){
           console.error("Erro na chamada da API:", error);
         });
     }, []);
+    useEffect(()=>{
+      limparForm();
+    },[profissionalSelecionado])
+    function limparForm(){
+      setNome('');
+      setEmail('');
+    }
     
     return {listaProfissionais,
               nome,
