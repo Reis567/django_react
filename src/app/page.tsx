@@ -44,7 +44,7 @@ export default function Home() {
           </Grid>
         </Grid>
         <DialogActions sx={{padding: '48px'}}>
-          <Button variant="outlined">
+          <Button variant="outlined" onClick={()=>setProfissionalSelecionado(null)}>
             Cancelar
           </Button>
           <Button variant="outlined">
