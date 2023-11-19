@@ -16,7 +16,9 @@ export default function Home() {
 
   return (
     <div>
-      <Lista profissionais={listaProfissionais}></Lista>
+      <Lista 
+      profissionais={listaProfissionais}
+      onSelect={(profissional)=>setProfissionalSelecionado(profissional)}></Lista>
       <Dialog open={true} fullWidth PaperProps={{ sx: { padding: '48px' } }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>

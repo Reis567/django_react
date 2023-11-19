@@ -49,7 +49,8 @@ const ListaVazia = styled.h3`
   font-size:30px;
 `
 interface PropsLista {
-  profissionais:Profissional[]
+  profissionais:Profissional[],
+  onSelect:(profissional:Profissional)=>void
 }
 const Lista = (props:PropsLista) => {
   return (
@@ -71,7 +72,7 @@ const Lista = (props:PropsLista) => {
                 <Descricao>
                   {profissional.descricao}
                 </Descricao>
-                <Button variant="outlined">Contratar</Button>
+                <Button variant="outlined" onClick={()=>props.onSelect(profissional)}>Contratar</Button>
               </Infos>
             </ItemStyled>
           ))}
