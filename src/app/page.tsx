@@ -9,7 +9,9 @@ export default function Home() {
           nome,
           setNome,
           email,
-          setEmail} = useIndex();
+          setEmail,
+          profissionalSelecionado,
+          setProfissionalSelecionado} = useIndex();
 
 
   return (
