@@ -19,7 +19,7 @@ export default function Home() {
       <Lista 
       profissionais={listaProfissionais}
       onSelect={(profissional)=>setProfissionalSelecionado(profissional)}></Lista>
-      <Dialog open={true} fullWidth PaperProps={{ sx: { padding: '48px' } }}>
+      <Dialog open={profissionalSelecionado !==null} fullWidth PaperProps={{ sx: { padding: '48px' } }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
           <TextField 

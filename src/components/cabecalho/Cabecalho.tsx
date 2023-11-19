@@ -43,5 +43,4 @@ const Cabecalho = () => {
       </Cont>
   )
 }
-
 export default Cabecalho
