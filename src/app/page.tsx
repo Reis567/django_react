@@ -30,6 +30,14 @@ export default function Home() {
             />
           </Grid>
         </Grid>
+        <DialogActions sx={{padding: '48px'}}>
+          <Button variant="outlined">
+            Cancelar
+          </Button>
+          <Button variant="outlined">
+            Confirmar
+          </Button>
+        </DialogActions>
       </Dialog>
     </div>
   );
