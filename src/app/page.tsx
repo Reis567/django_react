@@ -24,6 +24,7 @@ export default function Home() {
               fullWidth
               InputLabelProps={{ sx: { color: 'black' } }}
               onChange={(e)=>setNome(e.target.value)}
+              value={nome}
             />
           </Grid>
 
@@ -34,6 +35,7 @@ export default function Home() {
               fullWidth
               InputLabelProps={{ sx: { color: 'black' } }}
               onChange={(e)=>setEmail(e.target.value)}
+              value={email}
             />
           </Grid>
         </Grid>
