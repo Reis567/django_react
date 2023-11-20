@@ -4,7 +4,6 @@ import { ListStyled , ItemStyled, Foto, Infos, Nome, Valor, Descricao, ListaVazi
 import { Button } from '@mui/material';
 import { Profissional } from '../entidades/profissional';
 
- 
 
 interface PropsLista {
   profissionais:Profissional[],
