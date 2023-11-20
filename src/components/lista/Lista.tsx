@@ -17,6 +17,7 @@ const ItemStyled = styled.li`
   padding: 20px;
   max-height: 50%;
   max-width: 50%;
+  
 `;
 
 const Infos = styled.div`
@@ -26,7 +27,12 @@ const Infos = styled.div`
 const Foto = styled.img`
   width: 100%;
   height: 100%;
+  max-height:300px;
+  max-width:300px;
   border-radius: 20px;
+  width: auto;
+  height: auto;
+  
 `;
 
 const Nome = styled.h3`
