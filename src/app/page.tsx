@@ -61,7 +61,7 @@ export default function Home() {
       </Dialog>
       <Snackbar
       message={mensagem}
-      open={true}
+      open={mensagem.length>0}
       autoHideDuration={2500}
       onClose={()=>setMensagem("")}
       />
