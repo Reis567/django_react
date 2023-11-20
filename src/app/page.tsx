@@ -62,7 +62,7 @@ export default function Home() {
       <Snackbar
       message={mensagem}
       open={mensagem.length>0}
-      autoHideDuration={2500}
+      autoHideDuration={1500}
       onClose={()=>setMensagem("")}
       />
     </div>
