@@ -33,8 +33,10 @@ export const NavBtns = styled.div`
 `
 
 export const StyledMuiButton = styled(Button)`
-  border: 2px solid #f7f2ee; // Substitua pelo código de cor desejado
+  border: 2px solid #f7f2ee; 
   padding-inline:20px;
   font-weight:bolder;
   font-size:15px;
-`;  
+`;
+
+ 

@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { ListStyled , ItemStyled, Foto, Infos, Nome, Valor, Descricao, ListaVazia } from './ListaStyle';
+import { ListStyled ,Hr, ItemStyled, Foto, Infos, Nome, Valor, Descricao, ListaVazia, ButtonStyled } from './ListaStyle';
 import { Button } from '@mui/material';
 import { Profissional } from '../entidades/profissional';
 
@@ -21,15 +21,16 @@ const Lista = (props:PropsLista) => {
                 <Nome>
                   {profissional.nome}
                 </Nome>
+                  <Descricao>
+                    {profissional.descricao}
+                  </Descricao>
                 <Valor>
                   R$ {profissional.valor_hora.toLocaleString('pt-Br', {
                     minimumFractionDigits: 2,
                   })} / HR
                 </Valor>
-                <Descricao>
-                  {profissional.descricao}
-                </Descricao>
-                <Button variant="outlined" onClick={()=>props.onSelect(profissional)}>Contratar</Button>
+                <Hr />
+                <ButtonStyled variant="outlined" onClick={()=>props.onSelect(profissional)}>Contratar</ButtonStyled>
               </Infos>
             </ItemStyled>
           ))}

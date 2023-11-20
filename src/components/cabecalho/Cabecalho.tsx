@@ -29,7 +29,7 @@ const Cabecalho = () => {
           </StyledMuiButton>
 
           <StyledMuiButton>
-            Logout
+            Register
           </StyledMuiButton>
         </NavBtns>
 
