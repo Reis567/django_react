@@ -21,6 +21,17 @@ export function useIndex(){
     useEffect(()=>{
       limparForm();
     },[profissionalSelecionado])
+
+    function marcarJob(){
+      if(validarDados()){
+
+        alert('clicou confirmar')
+      }
+    }
+
+    function validarDados(){
+      return nome.length > 0  && email.length > 0 ;
+    }
     function limparForm(){
       setNome('');
       setEmail('');
@@ -32,5 +43,6 @@ export function useIndex(){
               email,
               setEmail,
               profissionalSelecionado,
-              setProfissionalSelecionado}
+              setProfissionalSelecionado,
+              marcarJob}
 }

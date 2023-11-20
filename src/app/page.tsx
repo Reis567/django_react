@@ -11,7 +11,8 @@ export default function Home() {
           email,
           setEmail,
           profissionalSelecionado,
-          setProfissionalSelecionado} = useIndex();
+          setProfissionalSelecionado,
+          marcarJob} = useIndex();
 
 
   return (
@@ -51,7 +52,7 @@ export default function Home() {
           <Button variant="outlined" onClick={()=>setProfissionalSelecionado(null)}>
             Cancelar
           </Button>
-          <Button variant="outlined">
+          <Button variant="outlined" onClick={()=>marcarJob()}>
             Confirmar
           </Button>
         </DialogActions>
