@@ -9,6 +9,8 @@ export function useIndex(){
     const [email , setEmail]= useState("");
     const [profissionalSelecionado, setProfissionalSelecionado]= useState<Profissional| null>(null)
 
+    const [mensagem, setMensagem]= useState('')
+
     useEffect(() => {
       ApiService.get('/profissionais')
         .then((response) => {
@@ -32,13 +34,13 @@ export function useIndex(){
             email
           }).then(()=>{
             setProfissionalSelecionado(null)
-            alert('Marcou o job')
+            setMensagem('Marcou o job')
           }).catch((erro)=>{
-            alert(erro.respose?.data.message)
+            setMensagem(erro.respose?.data.message)
           });
         
         }else{
-          alert('Preencha corretamente todos os campos')
+          setMensagem('Preencha corretamente todos os campos')
         }
       }
     }
@@ -58,5 +60,7 @@ export function useIndex(){
               setEmail,
               profissionalSelecionado,
               setProfissionalSelecionado,
+              mensagem,
+              setMensagem,
               marcarJob}
 }

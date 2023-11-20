@@ -1,6 +1,6 @@
 "use client"
 import Lista from "@/components/lista/Lista";
-import { Button, Dialog, DialogActions, Grid, TextField } from "@mui/material";
+import { Button, Dialog, DialogActions, Grid, Snackbar, TextField } from "@mui/material";
 import { Profissional } from "@/components/entidades/profissional";
 import { useIndex } from "@/hooks/pages/useIndex";
 
@@ -12,6 +12,8 @@ export default function Home() {
           setEmail,
           profissionalSelecionado,
           setProfissionalSelecionado,
+          mensagem,
+          setMensagem,
           marcarJob} = useIndex();
 
 
@@ -57,6 +59,12 @@ export default function Home() {
           </Button>
         </DialogActions>
       </Dialog>
+      <Snackbar
+      message={mensagem}
+      open={true}
+      autoHideDuration={2500}
+      onClose={()=>setMensagem("")}
+      />
     </div>
   );
 }
