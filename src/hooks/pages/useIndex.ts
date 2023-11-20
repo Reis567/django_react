@@ -23,9 +23,18 @@ export function useIndex(){
     },[profissionalSelecionado])
 
     function marcarJob(){
-      if(validarDados()){
-
-        alert('clicou confirmar')
+      if(profissionalSelecionado !== null){
+        if(validarDados()){
+          ApiService.post('/profissional/'
+          + profissionalSelecionado.id 
+          + '/job',{
+            nome,
+            email
+          }).then(()=>{
+            setProfissionalSelecionado(null)
+            alert('Marcou o job')
+          })
+        }
       }
     }
 
