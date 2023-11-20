@@ -33,7 +33,12 @@ export function useIndex(){
           }).then(()=>{
             setProfissionalSelecionado(null)
             alert('Marcou o job')
-          })
+          }).catch((erro)=>{
+            alert(erro.respose?.data.message)
+          });
+        
+        }else{
+          alert('Preencha corretamente todos os campos')
         }
       }
     }
